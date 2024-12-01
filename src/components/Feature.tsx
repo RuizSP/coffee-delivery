@@ -15,10 +15,10 @@ const iconMap = {
 interface FeatureProps {
   icon: string; // Agora o ícone é uma string que identificará qual ícone usar
   text: string;
-  backgroundColor: string;
+  backgroundcolor: string;
 }
 
-const FeatureWrapper = styled.span<{ backgroundColor: string }>`
+const FeatureWrapper = styled.span<{ backgroundcolor: string }>`
   display: flex;
   align-items: center;
   padding: 10px;
@@ -32,7 +32,7 @@ const FeatureWrapper = styled.span<{ backgroundColor: string }>`
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.backgroundcolor};
     border-radius: 100%;
     padding: 8px;
   }
@@ -44,12 +44,12 @@ const FeatureWrapper = styled.span<{ backgroundColor: string }>`
   }
 `;
 
-const Feature: React.FC<FeatureProps> = ({ icon, text, backgroundColor }) => {
+const Feature: React.FC<FeatureProps> = ({ icon, text, backgroundcolor: backgroundColor }) => {
   // Selecionando o ícone com base no nome da string
   const selectedIcon = iconMap[icon as keyof typeof iconMap];
 
   return (
-    <FeatureWrapper backgroundColor={backgroundColor}>
+    <FeatureWrapper backgroundcolor={backgroundColor}>
       <span>{selectedIcon}</span> {/* Exibe o ícone correspondente */}
       {text}
     </FeatureWrapper>

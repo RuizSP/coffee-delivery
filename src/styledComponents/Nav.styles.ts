@@ -8,6 +8,7 @@ export const  Nav = styled.nav`
     width: 100%;
     gap:70%;
     height: 104px;
+    background: var(--background);
 
 
 `

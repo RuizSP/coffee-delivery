@@ -17,21 +17,21 @@ export function Banner()
                             icon={"cart"}
                             text="Compra simples e segura" 
 
-                            backgroundColor="var(--yellow-dark)"
+                            backgroundcolor="var(--yellow-dark)"
                         />
                         <Feature 
                             icon={"package"}
                             text="Embalagem mantém o café intacto" 
-                            backgroundColor="var(--base-text)"/>
+                            backgroundcolor="var(--base-text)"/>
                         <Feature 
                             icon={"timer"}
                             text="Entrega rápida e rastreada" 
-                            backgroundColor="var(--yellow)"/>
+                            backgroundcolor="var(--yellow)"/>
                         
                         <Feature 
                             icon={"coffee"}
                             text="O café chega fresquinho até você" 
-                            backgroundColor="var(--purple)"/>
+                            backgroundcolor="var(--purple)"/>
                 </Grid>
            </div>
             <div>

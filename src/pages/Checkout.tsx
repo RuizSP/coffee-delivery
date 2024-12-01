@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { CoffeeCartItem } from "../components/CoffeeCartItem";
+import { CoffeeContext } from "../App";
+import { useContext } from "react";
 
 export function Checkout()
 {
+    const{coffeesInCart} = useContext(CoffeeContext);
+
     return(
         <>
            <div>
@@ -35,7 +39,14 @@ export function Checkout()
 
            <div>
                 <strong>Cafés selecionados</strong>
-                    <CoffeeCartItem/>
+                   {
+                    coffeesInCart.map(coffee =>{
+                        return(
+                            <CoffeeCartItem key={coffee.id} coffee={coffee}></CoffeeCartItem>
+                        )
+                    })
+                
+                   }
                 <span>Total de itens R$</span>
                 <span>Entrega R$</span>
                 <strong>Total R$</strong>
